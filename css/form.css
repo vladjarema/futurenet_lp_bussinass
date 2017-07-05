@@ -1,0 +1,65 @@
+
+.imput-fullwidth {
+    width: 98%;
+    margin: 4px 1%;
+}
+
+.imput-half {
+    width: 48%;
+    margin: 4px 1%;
+    float: left;
+}
+
+.imput {
+    padding: 8px 8px;
+    border-radius: 3px;
+    border: 1px solid #a7c2d8;
+    
+}
+
+.checkbox {
+    width: 110px;
+    float: left;
+    margin-top: 8px;
+    margin-bottom: 15px;
+     font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+    
+}
+
+.checkbox-content {
+    margin: 0 1%;
+}
+
+.registration-button {
+    margin: 20px 1%;
+    padding: 18px 10%;
+    font-weight: 100;
+    color: white;
+    border: none;
+    font-size: 1.05em;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+      background-image: -moz-linear-gradient( 90deg, rgb(69,133,188) 0%, rgb(67,149,193) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(69,133,188) 0%, rgb(67,149,193) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(69,133,188) 0%, rgb(67,149,193) 100%);
+    cursor: pointer;
+    border-radius: 3px;
+    text-align: left;
+    float: left;
+    
+}
+
+.registration-button:hover {
+
+  background-image: -moz-linear-gradient( 90deg, rgb(55,106,150) 0%, rgb(67,149,193) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(55,106,150) 0%, rgb(67,149,193) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(55,106,150) 0%, rgb(67,149,193) 100%);
+}
+
+
+
+.button-wrap {
+    float: left;
+    width: 100%;
+}

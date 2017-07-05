@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>FutureNet landing-2</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/grid12.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/likely.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <script src="https://use.fontawesome.com/c5e4c1ba13.js"></script>
+    <script src="js/likely.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <!--    owl-gallery-->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+
+    <link rel="stylesheet" href="css/remodal-default-theme.css">
+    <link rel="stylesheet" href="css/remodal.css">
+
+
+
+</head>
+
+<body>
+
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+    <script>
+        $(document).ready(function() {
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function() {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+
+
+    <script>
+        $('a[href^="#"]').bind('click.smoothscroll', function(e) {
+            e.preventDefault();
+
+            var target = this.hash,
+                $target = $(target);
+
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top
+            }, 500, 'swing', function() {
+                window.location.hash = target;
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            var owl = $('.owl-carousel');
+            owl.owlCarousel({
+                margin: 0,
+                nav: true,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 2000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 4
+                    }
+
+                }
+            })
+        })
+    </script>
+
+
+    <header>
+
+        <div id="home" class="container banner-container">
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="logo-header">
+                        <a href="index.html" class="logo"><img src="img/logo-black.svg" alt=""></a>
+                    </div>
+
+
+
+                    <div id="home" class="header-content">
+                        <h1>Lorem Ipsum є, фактично, стандартною рибою аж з XVI сторіччя</h1>
+                        <h3>Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя...</h3>
+
+                        <a href="#" class="button-white" data-remodal-target="modal">
+                            Зарегистироваться
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+
+                <div class="image-container">
+
+
+                    <img class="img-bottom" src="img/men.png" alt="">
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+
+
+    <div class="remodal" data-remodal-id="modal">
+        <button data-remodal-action="close" class="remodal-close"></button>
+        <div class="form-content">
+            <p class="form-heading">Зарегистрируйся и получи 10$ в подарок</p>
+
+            <div class="wrap">
+
+                <input class="imput imput-half" type="text" placeholder="Имя" required>
+                <input class="imput imput-half" type="text" placeholder="Фамилия" required>
+                <input class="imput imput-fullwidth" type="text" placeholder="E-mail" required>
+                <input class="imput imput-fullwidth" type="text" placeholder="Дата рождения" required>
+                <input class="imput imput-fullwidth" type="text" placeholder="Логин" required>
+                <input class="imput imput-half" type="text" placeholder="Пароль" required>
+                <input class="imput imput-half" type="text" placeholder="Подтвердите пароль" required>
+
+                <fieldset>
+                    <div class="checkbox-content">
+                        <div class="checkbox">
+                            <input type="radio" name="gender" value="male"> Мужчина<br>
+                        </div>
+                        <div class="checkbox">
+
+                            <input type="radio" name="gender" value="female"> Женщина<br>
+                        </div>
+
+                    </div>
+                </fieldset>
+
+                <div class="g-recaptcha" data-sitekey="6LdUDicUAAAAAPPY3nrZAOR4OvaPnVQzmvt-q8DL"></div>
+                <div class="button-wrap"><button class="registration-button">Зарегестрироваться</button></div>
+                <div class="licence">
+
+                    Pressing register button, you accept our terms and you accept our rules about data, including cookie cookie policy.
+
+                    <div class="licennce-text">
+                        <input type="checkbox" name="subscribe" value="newsletter">
+                        <label for="subscribeNews">I declare that I have read the Terms and Conditions (Terms of Service) accept its terms and consent to the processing of my personal data, including to receive electronic business information.</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="subscribe" value="newsletter">
+                        <label for="subscribeNews">I confirm that I have read the terms and conditions of participation in the FutureNet, including the marketing plan, and I am aware that the portal is not an investment, and the terms and rules for payment of accumulated funds are dependent on the amount and activity of users.</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="benefits">
+        <div class="container">
+            <h2>Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні</h2>
+            <di class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="icon-block">
+                        <div class="icon-image"><img width="100px" height="auto" src="img/1.png" alt=""></div>
+                        <div class="image-heading">Lorem ipsum dolor</div>
+                        <div class="image-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="icon-block">
+                        <div class="icon-image"><img width="40%" src="img/2.png" alt=""></div>
+                        <div class="image-heading">Lorem ipsum dolor</div>
+                        <div class="image-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="icon-block">
+                        <div class="icon-image"><img width="40%" src="img/3.png" alt=""></div>
+                        <div class="image-heading">Lorem ipsum dolor</div>
+                        <div class="image-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="icon-block">
+                        <div class="icon-image"><img width="40%" src="img/4.png" alt=""></div>
+                        <div class="image-heading">Lorem ipsum dolor</div>
+                        <div class="image-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                    </div>
+                </div>
+            </di>
+        </div>
+    </div>
+
+    <div class="video-block " id="learnmore">
+        <img src="img/BG-dot.png" alt="" class="dot-bg-left">
+        <img src="img/BG-dot.png" alt="" class="dot-bg-right">
+
+        <div class="container-fluid">
+            <div class="container">
+                <h2>Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні</h2>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="video">
+                            <iframe width="100%" height="310" src="https://www.youtube.com/embed/lR7AZpmhq4c" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="text-block">
+                            <h4>Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні</h4>
+                            <p class="simple-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque ullam id mollitia obcaecati totam hic a, vitae, quia repellendus possimus nobis, quisquam eum velit, delectus ut similique ad soluta impedit! <br><br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque ullam id mollitia obcaecati totam hic a, vitae, quia repellendus possimus nobis, quisquam eum velit, delectus ut similique ad soluta impedit! <br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque ullam id mollitia obcaecati totam hic a, vitae, quia repellendus possimus nobis, quisquam eum velit, delectus ut similique ad soluta impedit! <br><br> </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--    gallery-block-->
+
+    <div class="gallery">
+        <div class="container-fluid">
+            <div class="container">
+                <h2>Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні</h2>
+            </div>
+            <div class="gallery">
+
+                <div class="owl-carousel owl-theme">
+                    <div> <img src="img/gallery/1.jpg" alt=""></div>
+                    <div> <img src="img/gallery/2.jpg" alt=""></div>
+                    <div> <img src="img/gallery/3.jpg" alt=""></div>
+                    <div> <img src="img/gallery/4.jpg" alt=""></div>
+                    <div> <img src="img/gallery/5.jpg" alt=""></div>
+                    <div> <img src="img/gallery/6.jpg" alt=""></div>
+                    <div> <img src="img/gallery/7.jpg" alt=""></div>
+                    <div> <img src="img/gallery/8.jpg" alt=""></div>
+                    <div> <img src="img/gallery/9.jpg" alt=""></div>
+                    <div> <img src="img/gallery/10.jpg" alt=""></div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="cta-block image-bottom">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="cta-text-block">
+                            <div class="cta-banner">Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні</div>
+                            <h3>Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя...</h3>
+
+
+
+                            <a href="#" class="button-white inverce" data-remodal-target="modal">
+                           зарегестрироваться
+                        </a>
+                            <div class="likely">
+                                <div class="twitter">Твитнуть</div>
+                                <div class="facebook">Поделиться</div>
+                                <div class="gplus">Плюсануть</div>
+                                <div class="vkontakte">Поделиться</div>
+                                <div class="telegram">Отправить</div>
+                                <div class="odnoklassniki">Класснуть</div>
+                                <div class="linkedin">Линкануть</div>
+                                <div class="pinterest" data-media="i/pinnable.jpg">Запинить</div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="col-sm-6 ">
+
+                        <img class="right-image" src="img/portrait-2.png" alt="">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="img-footer-img">
+                        <img src="img/logo_white.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="col-sm-5">
+                    <p class="footer-text">FutureNet © 2014-2017 first social network with end to end encryptionz.</p>
+
+                </div>
+                <div class="col-sm-4">
+                    <p class="footer-text">Подписывайтесь на нас</p>
+                    <div class="social-icobs">
+                        <a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                        <a href="#"> <i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <script src="js/remodal.min.js"></script>
+</body>
+
+</html>
